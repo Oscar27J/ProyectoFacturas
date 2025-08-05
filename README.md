@@ -1,101 +1,129 @@
-# 🧾 Proyecto: Extracción de Facturas PDF a Excel
+# 🧾 Proyecto: Extracción de datos de facturas en PDF con Python
 
-Este proyecto automatiza la extracción de datos de facturas en formato PDF y los convierte en un archivo Excel organizado y listo para su análisis.
+Este script automatiza la lectura de archivos PDF que contienen facturas, extrae datos clave (como número de factura, cliente, fecha, RUC, IGV y total), y genera:
 
----
-
-## 🚀 Funcionalidad
-
-✅ Lee todos los archivos PDF de la carpeta `input/`.  
-✅ Extrae texto de cada factura utilizando OCR (Reconocimiento Óptico de Caracteres).  
-✅ Procesa los datos y los organiza en formato tabla.  
-✅ Exporta los resultados a un archivo Excel dentro de la carpeta `output/`.
+- Un archivo Excel con todos los datos (facturas_resumen.xlsx)
 
 ---
 
-## 📁 Estructura del Proyecto
+## 📂 Estructura del proyecto
 
-```
-ProyectoFacturas/
-│
-├── input/
-│   ├── factura_001.pdf
-│   └── factura_002.pdf
-│
-├── output/
-│   └── facturas_procesadas.xlsx
-│
-├── main.py
-├── requirements.txt
-└── README.md
-```
+Proyecto/
+├── input/            # Coloca aquí tus archivos PDF de facturas
+├── output/           # Se generarán el Excel y el HTML
+├── main.py           # Script principal
+├── requirements.txt  # Dependencias
+└── README.md         # Este archivo
 
 ---
 
 ## ⚙️ Requisitos
 
-- Python 3.10 o superior
-- Tesseract OCR instalado en el sistema (versión recomendada: 5.x)
-- Sistema operativo: Windows (aunque puede adaptarse a Linux/Mac)
+### 1. Python 3.10+  
+[🔗 Descargar Python](https://www.python.org/downloads/)
+
+Durante la instalación, asegúrate de marcar: ✅ *Add Python to PATH*
 
 ---
 
-## 🛠 Instalación y uso
+### 2. Tesseract OCR  
+Este proyecto utiliza OCR para extraer texto de los PDF.
 
-### 1. Clona o descarga este repositorio
+#### 🔽 Instala Tesseract:
+- [🔗 Windows Installer oficial](https://github.com/tesseract-ocr/tesseract/wiki#windows)
+  - Recomendado: Instala en C:\Program Files\Tesseract-OCR\
+
+#### 📂 Importante:
+Después de instalar Tesseract, verifica que este archivo exista:
+
+C:\Program Files\Tesseract-OCR\tessdata\spa.traineddata
+
+Si *no tienes* spa.traineddata, descárgalo manualmente desde:
+
+👉 [🔗 Descargar spa.traineddata](https://github.com/tesseract-ocr/tessdata/blob/main/spa.traineddata)
+
+y colócalo en la carpeta:
+
+C:\Program Files\Tesseract-OCR\tessdata\
+
+---
+
+## 🧰 Instalación del proyecto
+
+1. *Clona este repositorio o descarga los archivos ZIP*
+2. Abre una terminal (CMD o PowerShell)
+3. Ve a la carpeta del proyecto:
 
 ```bash
-git clone https://github.com/tuusuario/ProyectoFacturas.git
-cd ProyectoFacturas
-```
+cd ruta\del\proyecto
 
-### 2. Crea y activa el entorno virtual
+4. Crea un entorno virtual (opcional pero recomendado)
 
-```bash
+
+
 python -m venv venv
-.\venv\Scripts\activate
-```
+venv\Scripts\activate
 
-### 3. Instala las dependencias
+5. Instala las dependencias
 
-```bash
+
+
 pip install -r requirements.txt
-```
 
-> Si no tienes Tesseract instalado, descárgalo desde:  
-> 👉 https://github.com/tesseract-ocr/tesseract  
-> Asegúrate de agregar la ruta de instalación a las variables del sistema y que incluya el archivo `spa.traineddata`.
 
-### 4. Ejecuta el script
+---
 
-```bash
+▶️ Cómo usar
+
+1. Coloca tus facturas PDF dentro de la carpeta /input
+
+
+2. Corre el script:
+
+
+
 python main.py
-```
+
+3. Al finalizar se generarán los siguientes archivos en /output:
+
+facturas.xlsx → Datos limpios en formato Excel
+
+resumen_facturas.html → Tabla visual en navegador
+
+
+
+
 
 ---
 
-## 🧪 Ejemplo de resultado
+📌 Ejemplo de salida en Excel
 
-El script generará un archivo Excel llamado `facturas_procesadas.xlsx` con los datos extraídos, en formato limpio y estructurado para su posterior análisis o reporte.
+Archivo	Número de Factura	Cliente	Fecha	RUC	IGV	Total
 
----
+factura1.pdf	F001-12345	Juan Pérez	01/08/2025	20123456789	21.30	135.00
+factura2.pdf	F001-12346	ACME S.A.	02/08/2025	20456789123	34.00	221.00
 
-## 📌 Notas
 
-- Este proyecto está pensado para facturas escaneadas o digitales simples.
-- Para documentos muy complejos, pueden necesitarse ajustes personalizados en el OCR o el parser.
-- Puedes personalizar el script para adaptarse a otros idiomas o formatos de factura.
 
 ---
 
-## 📄 Licencia
+💡 Notas adicionales
 
-Este proyecto es de uso libre para fines educativos o profesionales. Si lo utilizas como base, agradecería que cites la fuente en tu portafolio. 🙌
+Asegúrate de que los PDFs sean legibles (no escaneos borrosos).
+
+Si usas otro idioma, cambia el valor de lang='spa' en el código.
+
+El script no requiere conexión a internet una vez que todo está instalado.
+
+
 
 ---
 
-## 🧑‍💻 Autor
+🤝 Autor
 
-Oscar Alegre  
-Proyecto creado para mi portafolio de automatización con Python.  
-Contacto: oscaralegre19@gmail.com
+Oscar Alegre
+💼 Especialista en Automatización con Python
+📧 Contacto: (tu correo o LinkedIn)
+
+
+---

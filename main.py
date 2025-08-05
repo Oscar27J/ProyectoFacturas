@@ -2,6 +2,7 @@ import os
 from pdf2image import convert_from_path
 import pytesseract
 import pandas as pd
+import re
 
 # Configuración de Tesseract
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
@@ -44,9 +45,11 @@ for archivo in archivos_pdf:
         elif "RUC" in linea:
             ruc = linea.split(":")[-1].strip()
         elif "IGV" in linea:
-            igv = linea.split(":")[-1].replace("S/","").strip()
+            valor = linea.split(":")[-1].replace("S/","").strip()
+            igv = re.sub(r"[^\d, \.]", "", valor).replace(",", ".")
         elif "Total" in linea:
-            total = linea.split(":")[-1].replace("S/","").strip()
+            valor = linea.split(":")[-1].replace("S/.","").strip()
+            total = re.sub(r"[^\d, \.]", "", valor).replace(",", ".")
 
     datos_facturas.append({
         "Archivo": archivo,
@@ -60,5 +63,5 @@ for archivo in archivos_pdf:
 
 # Crear Excel
 df = pd.DataFrame(datos_facturas)
-df.to_excel("output/facturas.xlsx", index=False)
+df.to_excel("output/facturas_resumen.xlsx", index=False)
 print("✅ Datos exportados a 'facturas.xlsx'")
