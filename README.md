@@ -15,6 +15,7 @@ Proyecto/
 ├── main.py           # Script principal
 ├── requirements.txt  # Dependencias
 └── README.md         # Este archivo
+```
 
 ---
 
