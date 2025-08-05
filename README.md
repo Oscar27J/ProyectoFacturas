@@ -52,7 +52,7 @@ y colócalo en la carpeta:
 
 ## 🧰 Instalación del proyecto
 
-1. *Clona este repositorio o descarga los archivos ZIP*
+1. Clona este repositorio o descarga los archivos ZIP
 2. Abre una terminal (CMD o PowerShell)
 3. Ve a la carpeta del proyecto:
 
@@ -84,11 +84,12 @@ facturas_resumen.xlsx → Datos limpios en formato Excel
 
 ## 📌 Ejemplo de salida en Excel
 
+```plaintext
 Archivo	Número de Factura	Cliente	Fecha	RUC	IGV	Total
 
 factura1.pdf	F001-12345	Juan Pérez	01/08/2025	20123456789	21.30	135.00
 factura2.pdf	F001-12346	ACME S.A.	02/08/2025	20456789123	34.00	221.00
-
+```
 
 ---
 
@@ -96,7 +97,7 @@ factura2.pdf	F001-12346	ACME S.A.	02/08/2025	20456789123	34.00	221.00
 
 Asegúrate de que los PDFs sean legibles (no escaneos borrosos).
 
-Si usas otro idioma, cambia el valor de lang='spa' en el código.
+Si usas otro idioma, cambia el valor de *lang='spa'* en el código.
 
 El script no requiere conexión a internet una vez que todo está instalado.
 
@@ -106,8 +107,8 @@ El script no requiere conexión a internet una vez que todo está instalado.
 
 ## 🤝 Autor
 
-# Oscar Alegre
-💼 Especialista en Automatización con Python
+### Oscar Alegre
+💼 Especialista en Automatización con Python.
 📧 Contacto: (oscaralregre19@gmail.com)
 
 
