@@ -60,8 +60,8 @@ y colócalo en la carpeta:
 
 4. Crea un entorno virtual (opcional pero recomendado)
 
-*python -m venv venv*
-*venv\Scripts\activate*
+python -m venv venv
+venv\Scripts\activate
 
 5. Instala las dependencias
 
@@ -69,7 +69,7 @@ y colócalo en la carpeta:
 
 ---
 
-▶️ Cómo usar
+## ▶️ Cómo usar
 
 1. Coloca tus facturas PDF dentro de la carpeta /input
 2. Corre el script:
@@ -82,7 +82,7 @@ facturas_resumen.xlsx → Datos limpios en formato Excel
 
 ---
 
-📌 Ejemplo de salida en Excel
+## 📌 Ejemplo de salida en Excel
 
 Archivo	Número de Factura	Cliente	Fecha	RUC	IGV	Total
 
@@ -92,7 +92,7 @@ factura2.pdf	F001-12346	ACME S.A.	02/08/2025	20456789123	34.00	221.00
 
 ---
 
-💡 Notas adicionales
+## 💡 Notas adicionales
 
 Asegúrate de que los PDFs sean legibles (no escaneos borrosos).
 
@@ -104,11 +104,11 @@ El script no requiere conexión a internet una vez que todo está instalado.
 
 ---
 
-🤝 Autor
+## 🤝 Autor
 
-Oscar Alegre
+# Oscar Alegre
 💼 Especialista en Automatización con Python
-📧 Contacto: (tu correo o LinkedIn)
+📧 Contacto: (oscaralregre19@gmail.com)
 
 
 ---
