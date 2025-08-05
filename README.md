@@ -33,7 +33,7 @@ Este proyecto utiliza OCR para extraer texto de los PDF.
 
 #### 🔽 Instala Tesseract:
 - [🔗 Windows Installer oficial](https://github.com/tesseract-ocr/tesseract/wiki#windows)
-  - Recomendado: Instala en *C:\Program Files\Tesseract-OCR\*
+  - Recomendado: Instala en *C:\Program Files\Tesseract-OCR\ *
 
 #### 📂 Importante:
 Después de instalar Tesseract, verifica que este archivo exista:
@@ -46,7 +46,7 @@ Si no tienes *spa.traineddata*, descárgalo manualmente desde:
 
 y colócalo en la carpeta:
 
-*C:\Program Files\Tesseract-OCR\tessdata\*
+*C:\Program Files\Tesseract-OCR\tessdata\ *
 
 ---
 
